@@ -59,7 +59,7 @@ function loadDOM()
         {
             square.addEventListener("click", clickBox)
         }
-        )
+    )
 }
 
 // Function to create the playing board
@@ -75,6 +75,7 @@ function createBoard()
         div.className = "square";
 
         // There are 42 circles/squares that make up the playing board
+        // Set the upper 7 circles as taken
         if (i >= 42)
         {
             div.className = "taken";
@@ -168,7 +169,7 @@ function checkWon()
 // Reset the playing board
 function reset()
 {
-    // Clear the innter HTML
+    // Clear the innter HTML for the board
     board.innerHTML="";
 
     // Load the Data Object Model
